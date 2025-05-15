@@ -1,5 +1,4 @@
-function excusa(){
-    const sujetos = ["Mi perro", "El gato", "Mi abuela", "Un extraterrestre", "Mi hermano menor", 
+let sujetos = ["Mi perro", "El gato", "Mi abuela", "Un extraterrestre", "Mi hermano menor", 
         "Un fantasma", "El vecino", "Mi robot doméstico", "Una cabra en patineta", "Un duende borracho", "Un dios Griego", "Un payaso interdimensional", 
         "Mi profesor zombie", "Dora la Exploradora", "Una cucaracha con doctorado",
         "El conserje del multiverso",
@@ -9,7 +8,7 @@ function excusa(){
         "Una versión malvada de mi peluche",
         "Un pingüino exiliado del Polo Sur"]
 
-    const acciones = ["se comió", "tiró", "rompió", "escondió", "quemó", "mojó", "perdió", "hackeó", "metio", "secuestró", 
+    let acciones = ["se comió", "tiró", "rompió", "escondió", "quemó", "mojó", "perdió", "hackeó", "metio", "secuestró", 
         "vomitó sobre", "teletransportó", "sacrificó", "transformó en gelatina", "lanzó por la ventana", "convirtió en origami", 
         "escribió encima con salsa", "tiró al volcán", "confundió con comida",  "invocó demonios con", "me uso como control remoto para", 
         "me lavo el cerebro de una ostia con", "me convirtio en rana con",
@@ -53,7 +52,7 @@ function excusa(){
         "se convirtió en youtuber con la ayuda de",
         "organizó una competencia de baile sobre" ]
 
-    const objetos = ["mis deberes", "mi PC", "la tarea", "el informe", "mi movil", "el cuaderno", "el proyecto", "mi coche", 
+    let objetos = ["mis deberes", "mi PC", "la tarea", "el informe", "mi movil", "el cuaderno", "el proyecto", "mi coche", 
         "mi agujero negro de mascota", "mis dramas indios","el cactus parlante", "el refrigerador portátil", "el cubo de basura interdimensional",
         "el cactus parlante", "el refrigerador portátil", "el cubo de basura interdimensional", "el enchufe extradimensional", "el martillo de Thor"
         , "las gemas del infinito", "mi repertorio de mangas", "mi libro favorito", "una fregona emocionalmente inestable",
@@ -94,7 +93,7 @@ function excusa(){
         "una agenda que te juzga en silencio" ]
 
 
-        const relaciones = [
+        let relaciones = [
             "así pues, no logré hacer la tarea.",
             "por eso no pude asistir a clase.",
             "en consecuencia, el ejercicio quedó sin hacer.",
@@ -111,7 +110,8 @@ function excusa(){
             "por eso ahora tengo prohibido acercarme al laboratorio.",
             "por ende, esta es la historia oficial y no se discute."
           ]
-
+function excusa(){
+    
     const sujeto = sujetos[Math.floor(Math.random() * sujetos.length)];
 
     const accion = acciones[Math.floor(Math.random() * acciones.length)];
@@ -127,4 +127,28 @@ function excusa(){
 
     const resultado = sujeto + " " + accion + " " + objeto + relacion;
     document.getElementById("excusa").innerHTML = "<strong>"+ resultado  + "</strong>";
+}
+
+function añadir(){
+    const nuevoSujeto = document.getElementById("sujeto").value;
+    const nuevaAccion = document.getElementById("accion").value;
+    const nuevoObjeto = document.getElementById("objeto").value;
+    const nuevaRelacion = document.getElementById("relacion").value;
+        
+    if (nuevoSujeto && nuevaAccion && nuevoObjeto && nuevaRelacion){
+        sujetos.push(nuevoSujeto);
+        acciones.push(nuevaAccion);
+        objetos.push(nuevoObjeto);
+        relaciones.push(nuevaRelacion);
+
+        document.getElementById("sujeto").value = "";
+        document.getElementById("accion").value = "";
+        document.getElementById("objeto").value = "";
+        document.getElementById("relacion").value = "";
+
+        alert("Gracias por tu excusa, se ve que para lo que interesa bien que trabajamos eh...")
+    }
+    else{
+        alert("No puedes añadir aire, eso ya tenemos mucho con tu cabeza. Por favor, rellena los campos")
+    }
 }

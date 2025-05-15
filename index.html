@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de excusas</title>
+    <title>Excusator™</title>
     <link rel="icon" href="imagenes/Favicom_excusas.png" type="image/x-icon">
     <link rel="stylesheet" href="estilos.css">
     <script src="script.js"></script>
@@ -15,8 +15,36 @@
 
     <h2 id="excusa"></h2>
 
-    <p class="piePag">Al generar una excusa, usted acepta los riesgos asociados a no haber hecho la tarea, incluyendo pero no limitándose a: suspensos, memes internos del aula y eternas miradas de decepción.
+    <fieldset>
+    <h1>Ayudanos a expandir nuestros limites</h1>
+    
+    <div>
+        <label for="sujeto">Sujeto: </label>
+        <input type="text" id="sujeto" name="sujeto" size="25">
+    </div>
 
-        Gracias por elegir Excusator™. Saboteamos tu futuro con estilo.</p>
+    <div>
+        <label for="accion">Accion: </label>
+        <input type="text" id="accion" name="accion" size="25">
+    </div>
+
+    <div>
+        <label for="objeto">Objeto: </label>
+        <input type="text" id="objeto" name="objeto" size="25">
+    </div>
+    <div>
+        <label for="relacion">Relacion: </label>
+        <input type="text" id="relacion" name="relacion" size="25">
+    </div>
+    <br />
+    <button onclick="añadir()" id="añadir">Añadir datos</button>
+    </fieldset>
+
+    <p class="piePag">Al generar una excusa, usted acepta los riesgos asociados a no haber hecho la tarea, incluyendo pero no limitándose a: 
+        suspensos, memes internos del aula y eternas miradas de decepción.
+
+        Gracias por elegir Excusator™. Te ayudamos a sabotear tu futuro con estilo.</p>
+
+    
 </body>
 </html>
