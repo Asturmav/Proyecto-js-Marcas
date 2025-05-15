@@ -141,6 +141,9 @@ function añadir(){
         objetos.push(nuevoObjeto);
         relaciones.push(nuevaRelacion);
 
+        const resultado = nuevoSujeto + " " + nuevaAccion + " " + nuevoObjeto + nuevaRelacion;
+    document.getElementById("excusa").innerHTML = "<strong>"+ resultado  + "</strong>";
+
         document.getElementById("sujeto").value = "";
         document.getElementById("accion").value = "";
         document.getElementById("objeto").value = "";
